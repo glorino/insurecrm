@@ -1,5 +1,6 @@
 {
   "framework": "nextjs",
+  "name": "insurecrm",
   "crons": [
     {
       "path": "/api/cron/sla",
