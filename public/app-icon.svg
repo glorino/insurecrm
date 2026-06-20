@@ -1,4 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <rect x="0" y="0" width="1024" height="1024" rx="220" fill="#3b82f6"/>
-  <text x="512" y="620" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="380" fill="white" text-anchor="middle">SSV</text>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1024" height="1024" rx="220" fill="url(#bg)"/>
+  <!-- Shield icon -->
+  <g transform="translate(512,460)">
+    <path d="M0,-140 L130,-80 L130,40 C130,100 70,150 0,180 C-70,150 -130,100 -130,40 L-130,-80 Z" fill="none" stroke="white" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M-40,20 L-10,50 L50,-20" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
 </svg>
