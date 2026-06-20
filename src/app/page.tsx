@@ -130,7 +130,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/support" className="px-8 py-4 bg-white text-gray-900 rounded-2xl text-[15px] font-semibold hover:bg-gray-50 transition-all text-center shadow-xl hover:shadow-2xl hover:scale-[1.02] active:scale-[0.98]">
-                  Start Free Trial
+                  Contact Sales
                 </Link>
                 <button onClick={() => setDemoOpen(true)} className="px-8 py-4 bg-transparent border-2 border-blue-300/30 text-blue-200 rounded-2xl text-[15px] font-semibold hover:bg-white/5 transition-all text-center hover:scale-[1.02] active:scale-[0.98]">
                   Book a Demo
@@ -534,7 +534,7 @@ export default function HomePage() {
                 Book a Demo
               </button>
               <Link href="/support" className="inline-flex items-center justify-center gap-2 px-10 py-4 border-2 border-blue-300/30 text-blue-200 rounded-2xl text-[15px] font-semibold hover:bg-white/5 transition-all hover:scale-[1.02] active:scale-[0.98]">
-                Start Free Trial
+                Contact Sales
               </Link>
             </div>
           </RevealSection>
