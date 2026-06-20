@@ -1,8 +1,8 @@
 export type IndustrySlug =
-  | "insurance"
+  | "healthcare"
   | "realestate"
   | "fintech"
-  | "healthcare"
+  | "insurance"
   | "ecommerce";
 
 export interface IndustryConfig {
@@ -11,6 +11,8 @@ export interface IndustryConfig {
   tagline: string;
   logo: string; // path to logo SVG
   favicon: string;
+  description: string;
+  ticketPrefix: string;
   colors: {
     primary: string;
     primaryLight: string;
@@ -41,12 +43,93 @@ export interface IndustryConfig {
 }
 
 export const industries: Record<IndustrySlug, IndustryConfig> = {
+  healthcare: {
+    slug: "healthcare",
+    name: "DentalCRM",
+    tagline: "Smart Dental Hospital Support Platform",
+    logo: "/industries/healthcare/logo.svg",
+    favicon: "/industries/healthcare/favicon.svg",
+    description: "dental hospital support",
+    ticketPrefix: "DNT",
+    colors: {
+      primary: "#0891b2",
+      primaryLight: "#22d3ee",
+      primaryDark: "#0e7490",
+      secondary: "#06b6d4",
+      accent: "#06b6d4",
+      gradient: "from-cyan-600 to-teal-600",
+      gradientCSS: "linear-gradient(135deg, #0891b2 0%, #0d9488 100%)",
+    },
+    contact: {
+      email: "info@glopresc.com",
+      whatsapp: "+2347082529729",
+      phone: "+2347082529729",
+      website: "supportflow-ai-six.vercel.app",
+    },
+    chatbot: {
+      name: "Dental AI",
+      personality: "dental hospital support specialist",
+      systemPrompt: `You are Dental AI, the intelligent support assistant for DentalCRM — a dental hospital.
+You specialize in dental appointments, treatments, patient inquiries, and oral health information.
+Guidelines:
+- Be compassionate and professional
+- NEVER provide medical diagnoses or dental advice
+- Help with scheduling appointments and treatments
+- Direct dental emergencies to appropriate services
+- Handle patient information with utmost confidentiality
+- All currency is in Naira (₦)
+- Contact email: info@glopresc.com
+- WhatsApp: +2347082529729
+- For emergencies, always direct to emergency services`,
+      quickActions: [
+        { label: "Book dental appointment", icon: "🦷" },
+        { label: "Check treatment options", icon: "📋" },
+        { label: "Request consultation", icon: "💬" },
+        { label: "Talk to reception", icon: "👤" },
+      ],
+      fallbackResponses: {
+        greeting:
+          "Hello! Welcome to DentalCRM. I'm your dental hospital support assistant.\n\nI can help you with:\n• Dental appointment scheduling\n• Treatment information\n• Consultation requests\n• Insurance verification\n\nHow can I assist you today?",
+        emergency:
+          "🚨 For dental emergencies, please:\n\n1. Call our emergency line: +2347082529729\n2. Or visit the nearest dental hospital\n3. For severe pain or trauma, go to the ER\n\nI'm an AI assistant and cannot provide emergency dental care.",
+        appointment:
+          "I can help you schedule a dental appointment. Please provide:\n\n• Dentist name or specialty (general, orthodontist, etc.)\n• Preferred date and time\n• Reason for visit (checkup, cleaning, treatment)\n• Your patient ID (if available)\n\nI'll check availability and confirm.",
+        treatment:
+          "I can help you with treatment information. We offer:\n\n• General dentistry & checkups\n• Teeth cleaning & whitening\n• Orthodontics (braces/aligners)\n• Root canal treatment\n• Dental implants\n• Emergency dental care\n\nWhat treatment are you interested in?",
+        human:
+          "I'll connect you with our dental reception team right away.\n\n📧 Email: info@glopresc.com\n📱 WhatsApp: +2347082529729\n\nOur team is available Mon-Sat 8am-6pm.",
+        default:
+          "Thank you for contacting DentalCRM! I can help you with:\n\n• Dental appointment scheduling\n• Treatment information\n• Consultation requests\n• Insurance verification\n\nFor dental emergencies, please call +2347082529729.\n\nHow can I assist you?",
+      },
+    },
+    ticketCategories: [
+      "appointment",
+      "treatment",
+      "consultation",
+      "billing",
+      "insurance",
+      "complaint",
+    ],
+    whatsappTemplates: [
+      "appointment_reminder",
+      "treatment_update",
+      "consultation_confirm",
+      "follow_up",
+    ],
+    dashboardTitle: "DentalCRM Dashboard",
+    metaTitle: "DentalCRM — Smart Dental Hospital Support Platform",
+    metaDescription:
+      "AI-powered dental hospital support. Appointments, treatments, and patient care.",
+  },
+
   realestate: {
     slug: "realestate",
     name: "PropertyCRM",
     tagline: "Smart Property Support Platform",
     logo: "/industries/realestate/logo.svg",
     favicon: "/industries/realestate/favicon.svg",
+    description: "real estate and property support",
+    ticketPrefix: "PCR",
     colors: {
       primary: "#059669",
       primaryLight: "#34d399",
@@ -123,6 +206,8 @@ Guidelines:
     tagline: "Intelligent Financial Support Platform",
     logo: "/industries/fintech/logo.svg",
     favicon: "/industries/fintech/favicon.svg",
+    description: "financial services support",
+    ticketPrefix: "FIN",
     colors: {
       primary: "#1e3a5f",
       primaryLight: "#3b82f6",
@@ -199,6 +284,8 @@ Guidelines:
     tagline: "Smart Insurance Support Platform",
     logo: "/industries/insurance/logo.svg",
     favicon: "/industries/insurance/favicon.svg",
+    description: "insurance policy and claims support",
+    ticketPrefix: "INS",
     colors: {
       primary: "#2563eb",
       primaryLight: "#60a5fa",
@@ -269,89 +356,14 @@ Guidelines:
       "AI-powered insurance support. Claims processing, policy management, and customer service.",
   },
 
-  healthcare: {
-    slug: "healthcare",
-    name: "DentalCRM",
-    tagline: "Smart Dental Hospital Support Platform",
-    logo: "/industries/healthcare/logo.svg",
-    favicon: "/industries/healthcare/favicon.svg",
-    colors: {
-      primary: "#0891b2",
-      primaryLight: "#22d3ee",
-      primaryDark: "#0e7490",
-      secondary: "#06b6d4",
-      accent: "#06b6d4",
-      gradient: "from-cyan-600 to-teal-600",
-      gradientCSS: "linear-gradient(135deg, #0891b2 0%, #0d9488 100%)",
-    },
-    contact: {
-      email: "info@glopresc.com",
-      whatsapp: "+2347082529729",
-      phone: "+2347082529729",
-      website: "supportflow-ai-six.vercel.app",
-    },
-    chatbot: {
-      name: "Dental AI",
-      personality: "dental hospital support specialist",
-      systemPrompt: `You are Dental AI, the intelligent support assistant for DentalCRM — a dental hospital.
-You specialize in dental appointments, treatments, patient inquiries, and oral health information.
-Guidelines:
-- Be compassionate and professional
-- NEVER provide medical diagnoses or dental advice
-- Help with scheduling appointments and treatments
-- Direct dental emergencies to appropriate services
-- Handle patient information with utmost confidentiality
-- All currency is in Naira (₦)
-- Contact email: info@glopresc.com
-- WhatsApp: +2347082529729
-- For emergencies, always direct to emergency services`,
-      quickActions: [
-        { label: "Book dental appointment", icon: "🦷" },
-        { label: "Check treatment options", icon: "📋" },
-        { label: "Request consultation", icon: "💬" },
-        { label: "Talk to reception", icon: "👤" },
-      ],
-      fallbackResponses: {
-        greeting:
-          "Hello! Welcome to DentalCRM. I'm your dental hospital support assistant.\n\nI can help you with:\n• Dental appointment scheduling\n• Treatment information\n• Consultation requests\n• Insurance verification\n\nHow can I assist you today?",
-        emergency:
-          "🚨 For dental emergencies, please:\n\n1. Call our emergency line: +2347082529729\n2. Or visit the nearest dental hospital\n3. For severe pain or trauma, go to the ER\n\nI'm an AI assistant and cannot provide emergency dental care.",
-        appointment:
-          "I can help you schedule a dental appointment. Please provide:\n\n• Dentist name or specialty (general, orthodontist, etc.)\n• Preferred date and time\n• Reason for visit (checkup, cleaning, treatment)\n• Your patient ID (if available)\n\nI'll check availability and confirm.",
-        treatment:
-          "I can help you with treatment information. We offer:\n\n• General dentistry & checkups\n• Teeth cleaning & whitening\n• Orthodontics (braces/aligners)\n• Root canal treatment\n• Dental implants\n• Emergency dental care\n\nWhat treatment are you interested in?",
-        human:
-          "I'll connect you with our dental reception team right away.\n\n📧 Email: info@glopresc.com\n📱 WhatsApp: +2347082529729\n\nOur team is available Mon-Sat 8am-6pm.",
-        default:
-          "Thank you for contacting DentalCRM! I can help you with:\n\n• Dental appointment scheduling\n• Treatment information\n• Consultation requests\n• Insurance verification\n\nFor dental emergencies, please call +2347082529729.\n\nHow can I assist you?",
-      },
-    },
-    ticketCategories: [
-      "appointment",
-      "treatment",
-      "consultation",
-      "billing",
-      "insurance",
-      "complaint",
-    ],
-    whatsappTemplates: [
-      "appointment_reminder",
-      "treatment_update",
-      "consultation_confirm",
-      "follow_up",
-    ],
-    dashboardTitle: "DentalCRM Dashboard",
-    metaTitle: "DentalCRM — Smart Dental Hospital Support Platform",
-    metaDescription:
-      "AI-powered dental hospital support. Appointments, treatments, and patient care.",
-  },
-
   ecommerce: {
     slug: "ecommerce",
     name: "ShopCRM",
     tagline: "Smart E-Commerce Support Platform",
     logo: "/industries/ecommerce/logo.svg",
     favicon: "/industries/ecommerce/favicon.svg",
+    description: "e-commerce and retail support",
+    ticketPrefix: "SHP",
     colors: {
       primary: "#ea580c",
       primaryLight: "#fb923c",
@@ -423,13 +435,13 @@ Guidelines:
   },
 };
 
-export function getIndustry(slug: IndustrySlug = "insurance"): IndustryConfig {
-  return industries[slug] || industries.insurance;
+export function getIndustry(slug: IndustrySlug = "healthcare"): IndustryConfig {
+  return industries[slug] || industries.healthcare;
 }
 
 export function getIndustryFromEnv(): IndustrySlug {
   if (typeof process !== "undefined" && process.env) {
-    return (process.env.INDUSTRY_SLUG as IndustrySlug) || "insurance";
+    return (process.env.INDUSTRY_SLUG as IndustrySlug) || "healthcare";
   }
-  return "insurance";
+  return "healthcare";
 }
