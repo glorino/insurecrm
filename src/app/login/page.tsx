@@ -7,10 +7,10 @@ import { LangToggle } from "@/components/lang-toggle";
 import { useLang } from "@/lib/i18n/context";
 
 const demoLogins = [
-  { email: "admin@insurecrm.com", password: "admin123", role: "Super Admin", name: "Alex Johnson", avatar: "AJ", gradient: "from-violet-500 to-indigo-600" },
-  { email: "sarah@insurecrm.com", password: "demo123", role: "Manager", name: "Sarah Kim", avatar: "SK", gradient: "from-emerald-500 to-teal-600" },
-  { email: "tom@insurecrm.com", password: "demo123", role: "Agent", name: "Tom Chen", avatar: "TC", gradient: "from-blue-500 to-cyan-600" },
-  { email: "viewer@insurecrm.com", password: "demo123", role: "Viewer", name: "Jordan Lee", avatar: "JL", gradient: "from-gray-500 to-slate-600" },
+  { email: "adewale@insurecrm.com", password: "admin123", role: "Super Admin", name: "Adewale Coker", avatar: "AC", gradient: "from-violet-500 to-indigo-600" },
+  { email: "folake@insurecrm.com", password: "demo123", role: "Manager", name: "Folake Adesanya", avatar: "FA", gradient: "from-emerald-500 to-teal-600" },
+  { email: "emeka@insurecrm.com", password: "demo123", role: "Agent", name: "Emeka Nnamdi", avatar: "EN", gradient: "from-blue-500 to-cyan-600" },
+  { email: "dayo@insurecrm.com", password: "demo123", role: "Viewer", name: "Dayo Salami", avatar: "DS", gradient: "from-gray-500 to-slate-600" },
 ];
 
 export default function LoginPage() {
