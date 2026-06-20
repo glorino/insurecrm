@@ -14,8 +14,8 @@ interface IndustryCtx {
 }
 
 const Ctx = createContext<IndustryCtx>({
-  config: getIndustry("ssv"),
-  slug: "ssv",
+  config: getIndustry("insurance"),
+  slug: "insurance",
 });
 
 export function IndustryProvider({
