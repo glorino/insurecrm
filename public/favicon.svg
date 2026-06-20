@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect x="0" y="0" width="64" height="64" rx="14" fill="#3b82f6"/>
-  <text x="32" y="42" font-family="Arial, Helvetica, sans-serif" font-weight="bold" font-size="24" fill="white" text-anchor="middle">SSV</text>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <path d="M32 10L52 20V38C52 50 44 56 32 60C20 56 12 50 12 38V20L32 10Z" fill="white"/>
+  <path d="M32 16L48 24V38C48 48 42 53 32 56C22 53 16 48 16 38V24L32 16Z" fill="#2563eb"/>
+  <path d="M24 38L30 44L42 32" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
